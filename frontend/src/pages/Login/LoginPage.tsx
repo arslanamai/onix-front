@@ -1,6 +1,7 @@
 import { useState } from "react";
-import styles from "./LoginPage.module.css"; // Подключаем CSS-модуль
+import styles from "./LoginPage.module.scss";
 import { api } from "../../api/api";
+import { Link } from "react-router-dom";
 
 export function LoginPage() {
     const [email, setEmail] = useState("");
@@ -13,27 +14,26 @@ export function LoginPage() {
     return (
         <div className={styles.loginContainer}>
             <div className={styles.loginBox}>
-                <h2>Войти</h2>
+                <Link className= {styles.Link} to="/">
+                <p>✕</p>
+                </Link>
+                <h2>Sign in to Onix</h2>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.inputGroup}>
-                        <label htmlFor="email">Email</label>
                         <input
                             type="email"
-                            id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="Введите ваш email"
+                            placeholder="EMAIL"
                             required
                         />
                     </div>
                     <div className={styles.inputGroup}>
-                        <label htmlFor="password">Пароль</label>
                         <input
                             type="password"
-                            id="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            placeholder="Введите ваш пароль"
+                            placeholder="PASSWORD"
                             required
                         />
                     </div>

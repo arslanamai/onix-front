@@ -1,9 +1,9 @@
 import { createBrowserRouter} from "react-router-dom";
 import { Root } from "../components/Root";
 import { ProfilePage } from "../pages/Profile/ProfilePage";
-import { WebSitePage } from "../pages/WebSite/WebSitePage";
 import { LoginPage } from "../pages/Login/LoginPage";
-import { CleanPath } from "./CleanPath";
+import { WebSitePage } from "../pages/WebSite/WebSitePage";
+import { ContactPage } from "../pages/Contact/ContactPage";
 
 export const router = createBrowserRouter([
   {
@@ -11,27 +11,24 @@ export const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: "profile",
-        element: (
-          <CleanPath>
-            <ProfilePage/>
-          </CleanPath>)
-      },
-      {
-        path: "/website",
-        element: (
-          <CleanPath>
-            <WebSitePage />
-          </CleanPath>)
-      },
-      {
         path: "login",
-        element: (
-          <CleanPath>
-            <LoginPage/>
-          </CleanPath>)
+        element: <LoginPage/>,
       }
-    ],
-    errorElement: <div>Страница не найдена</div>,
+    ], 
+    errorElement: <div>Oops, page not found</div>,
   },
+  {
+    path: "profile",
+    element: <ProfilePage/>,
+  },
+  {
+    path: "website",
+    element: <WebSitePage/>,
+    children: [
+      {
+          path: "contact",
+          element: <ContactPage/>
+      }
+    ]
+  }
 ]);

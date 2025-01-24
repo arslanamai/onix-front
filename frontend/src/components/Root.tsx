@@ -1,12 +1,9 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-export type Props = {
-    children: React.ReactNode;
-  };
-  
-  export function Root() {
+export function Root() {
     return (
-        <div>
+        <div> 
+          <Link to="login">Log in</Link>
           <Outlet/>
         </div>
     );

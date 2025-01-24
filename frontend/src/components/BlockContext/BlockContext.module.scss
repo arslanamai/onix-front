@@ -1,0 +1,27 @@
+.context {
+    background-color: #343434;
+    max-width: 500px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .block {
+    height: 272px; /* Фиксированная высота для всех блоков */
+    width: 450px; /* Ширина под контейнер */
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none
+  }
+  
+  /* Настройка placeholder */
+  .placeholder {
+    height: 300px; /* Высота равна высоте блока */
+    width: 100%; /* Ширина полностью совпадает */
+    background-color: transparent;
+    visibility: hidden; /* Скрыть, чтобы не отвлекать */
+  }
+  

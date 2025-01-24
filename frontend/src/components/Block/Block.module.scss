@@ -1,0 +1,61 @@
+.blockContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 250px; /* Высота блока */
+  width: 450px; /* Ширина блока */
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  pointer-events: auto;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.editButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+.editIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+    opacity: 0.7; /* Лёгкая прозрачность при наведении */
+  }
+}
+
+.blockIndex {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+// @font-face {
+//   font-family: "Druk";
+//   src: url(../assets/fonts/drukwidecyr-bold.otf);
+//   font-weight: 700;
+// }
+
+.blockCode {
+  font-size: 14px;
+  color: #555;
+  word-wrap: break-word;
+}

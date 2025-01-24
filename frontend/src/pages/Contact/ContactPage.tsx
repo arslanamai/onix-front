@@ -1,6 +1,7 @@
-export function Header(){
+export function ContactPage(){
     return(
         <div>
+            
         </div>
     );
 }
